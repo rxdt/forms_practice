@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head> <title>Ubermelon Order Form</title></head>
+<body>
+    <h1>Order!</h1>
+
+    <table>
+        <thead style="text-align:center">
+            <tr>
+                <th colspan="2">Prices</th>
+            </tr>
+            <tr>
+                <th>Melon Name</th>
+                <th>Price per lb</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Watermelon</td>
+                <td>$1.59</td>
+            </tr>
+            <tr>
+                <td>Honeydew</td>
+                <td>$0.99</td>
+            </tr>
+            <tr>
+                <td>Canteloupe</td>
+                <td>$1.29</td>
+            </tr>
+            <tr>
+                <td>Crenshaw</td>
+                <td>$2.19</td>
+            </tr>
+            <tr>
+                <td>Canary</td>
+                <td>$11.99</td>
+            </tr>
+          
+        </tbody>   
+    </table>
+
+    <p>Place your orders here! You know you want to.</p>
+
+    <form action="https://ubermelon-order-form.herokuapp.com/process" method="POST">
+       <label>First Name<input type="text" name="firstname"></label>
+       <label>Last Name<input type="text" name="lastname"></label>
+       <br/>
+
+       Melon Type<select name="melontype">
+            <option value="watermelon">Watermelon</option>
+            <option value="honeydew">Honeydew<option>
+            <option value="canteloupe">Canteloupe</option>
+            <option value="crenshaw">Crenshaw<option>
+            <option value="canary">Canary</option>
+        </select>
+        <br/>
+
+        <label>Quantity*:<input type="text" name="quantity"></label>
+        <br/>
+
+        <label>Delivery Time
+        <label>AM<input type="radio" name="time" value="am"></label>
+        <label> PM<input type="radio" name="time" value="pm"></label>
+        <label>WAT<input type="radio" name="time" value="wat"></label>
+        </label><br/>
+
+        <label>Returning Customer
+            Yes<label><input type="radio" name="returning" value="yes"></label>
+            No<label><input type="radio" name="returning" value="no"></label>
+        </label>
+        <br/>
+
+        <label>Statistics<input type="checkbox" name="stats" value="dog"></label>
+        <label>Dog<input type="checkbox" name="stats" value="dog"></label>
+        <label>Cat<input type="checkbox" name="stats" value="cat"></label>
+        <label>Hedgehog<input type="checkbox" name="stats" value="hedgehog"></label>
+        <label>Balloonicorn<input type="checkbox" name="stats" value="balloonicorn"></label>
+        <label>Yak<input type="checkbox" name="stats" value="yak"></label>
+        <br/>
+
+        <label>Submit<input type="submit"></label>
+    </form>
+
+</body>
+</html>
